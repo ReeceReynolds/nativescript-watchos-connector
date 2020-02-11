@@ -48,7 +48,7 @@ export class WatchOSConnector implements WCSessionDelegate {
   }
 
   // Send the data to the companion WatchOS App
-  packageAndSend(object: {}, objectKey: string) {
+  sendObject(objectKey: string, object: {}) {
     this.checkActivation()
 
     // Send the object to the WatchOS app

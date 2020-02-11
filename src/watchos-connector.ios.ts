@@ -34,6 +34,19 @@ export class WatchOSConnector implements WCSessionDelegate {
     }
   }
 
+  // Return value as Obj-C value
+  convertInt(value) {
+    return NSNumber.numberWithInt(value)
+  }
+
+  convertDouble(value) {
+    return NSNumber.numberWithDouble(value)
+  }
+
+  convertFloat(value) {
+    return NSNumber.numberWithFloat(value)
+  }
+
   // Send the data to the companion WatchOS App
   packageAndSend(object: {}, objectKey: string) {
     this.checkActivation()

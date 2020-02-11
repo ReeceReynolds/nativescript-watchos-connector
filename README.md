@@ -51,7 +51,7 @@ this.watchOSConnector.createWCSession()
 
 ## watchOSChecker()
 
-Use `watchOSChecker` instead of 'isIOS' when working with passing data to the Apple Watch. This checks if the user is on iOS, has an Apple Watch paired and the WatchOS app is installed (**returns boolean**)
+Use `watchOSChecker` instead of `isIOS` when working with passing data to the Apple Watch. This checks if the user is on iOS, has an Apple Watch paired and the WatchOS app is installed (**returns boolean**)
 
 **TypeScript**
 

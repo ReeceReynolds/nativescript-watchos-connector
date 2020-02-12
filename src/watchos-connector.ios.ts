@@ -1,7 +1,7 @@
 import { isIOS } from 'tns-core-modules/platform/platform'
 
 export class WatchOSConnector implements WCSessionDelegate {
-  watchSession: any
+  public watchSession: any
 
   // Creates a WCSession
   createWCSession() {
@@ -56,6 +56,11 @@ export class WatchOSConnector implements WCSessionDelegate {
     this.watchSession.updateApplicationContextError(dictionary)
   }
 
+  // Used for sessionDidReceiveApplicationContext()
+  getWCSession() {
+    return this.watchSession
+  }
+
   // Needed to Conform to WCSessionDelegate - DON'T DELETE!!
   sessionActivationDidCompleteWithStateError(
     session: WCSession,
@@ -66,14 +71,21 @@ export class WatchOSConnector implements WCSessionDelegate {
       '(sessionActivationDidCompleteWithStateError) WCSession Activated'
     )
   }
+
   sessionDidBecomeInactive(session: WCSession): void {
     console.log('(sessionDidBecomeInactive) Session Became Inactive')
   }
   sessionDidDeactivate(session: WCSession): void {
     console.log('(sessionDidDeactivate) Session Deactivated')
   }
-  sessionReachabilityDidChange?(session: WCSession): void {}
-  sessionWatchStateDidChange?(session: WCSession): void {}
+  sessionReachabilityDidChange(session: WCSession): void {
+    console.log(
+      '(sessionReachabilityDidChange) Session Reachability Did Change'
+    )
+  }
+  sessionWatchStateDidChange(session: WCSession): void {
+    console.log('(sessionReachabilityDidChange) Session Watch State Did Change')
+  }
 
   // Not Used but Needed for WCSessionDelegate - DON'T DELETE!!
   debugDescription?: string

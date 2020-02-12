@@ -32,7 +32,7 @@ tns plugin add nativescript-watchos-connector
 
    ```javascript
    constructor(
-   	public watchOSConnector: WatchOSConnector
+    public watchOSConnector: WatchOSConnector
    )  {}
    ```
 

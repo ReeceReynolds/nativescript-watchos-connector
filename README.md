@@ -18,7 +18,25 @@ tns plugin add nativescript-watchos-connector
 
 # Usage
 
-1. To use this plugin you must first require / import it:
+**NativeScript Angular**
+
+1. For this plugin to work you must first add the nativescript-watchos-connector as a provider in your `app.module.ts`:
+
+   **TypeScript**
+
+```javascript
+import { WatchOSConnector } from 'nativescript-watchos-connector'
+
+@NgModule({
+  bootstrap: [AppComponent],
+  imports: [],
+  providers: [ WatchOSConnector ],
+  declarations: [ AppComponent ],
+  schemas: [ NO_ERRORS_SCHEMA ]
+})
+```
+
+2. Import the nativescript-watchos-connector plugin:
 
    **TypeScript**
 
@@ -26,7 +44,7 @@ tns plugin add nativescript-watchos-connector
    import { WatchOSConnector } from 'nativescript-watchos-connector'
    ```
 
-2. Create an instance of the import in the constructor:
+3. Create an instance of the import in the constructor:
 
    **TypeScript**
 

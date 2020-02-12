@@ -1,7 +1,8 @@
 # nativescript-watchos-connector
 
-![](https://img.shields.io/npm/v/nativescript-watchos-connector) ![](https://img.shields.io/github/downloads/reecereynolds/nativescript-watchos-connector/total)
-**Only iOS** Create a WCSession to receive and pass data to an Apple Watch.
+This is a NativeScript plugin that uses Apple WatchConnectivity to pass and receive data to a companion WatchOS app.
+
+![](https://img.shields.io/npm/v/nativescript-watchos-connector?style=for-the-badge) ![](https://img.shields.io/github/downloads/reecereynolds/nativescript-watchos-connector/total?style=for-the-badge) ![](https://img.shields.io/github/issues/reecereynolds/nativescript-watchos-connector?style=for-the-badge) ![](https://img.shields.io/twitter/follow/_reecereynolds?color=blue&label=Follow%20me&style=for-the-badge)
 
 # Prerequisites / Requirements
 
@@ -15,29 +16,23 @@ tns plugin add nativescript-watchos-connector
 
 # Usage
 
-To use this plugin you must first require / import it:
+1. To use this plugin you must first require / import it:
 
-**TypeScript**
+   **TypeScript**
 
-```javascript
-import { WatchOSConnector } from 'nativescript-watchos-connector'
-```
+   ```javascript
+   import { WatchOSConnector } from 'nativescript-watchos-connector'
+   ```
 
-**JavaScript**
+2. Create an instance of the import in the constructor:
 
-```javascript
-import WatchOSConnector from 'nativescript-watchos-connector'
-```
+   **TypeScript**
 
-Create an instance of the import in the constructor:
-
-**TypeScript**
-
-```javascript
-constructor(
-	public watchOSConnector: WatchOSConnector
-) {}
-```
+   ```javascript
+   constructor(
+   	public watchOSConnector: WatchOSConnector
+   ) {}
+   ```
 
 ## createWCSession()
 
@@ -101,7 +96,7 @@ Returns the value as a NSNumber with float
 this.watchOSConnector.convertInt(882.152)
 ```
 
-## sendObject(objectKey, object)
+## sendObjectToWatch(objectKey, object)
 
 Sends the data to the companion WatchOS app using `updateApplicationContext`. You need to pass in a key for the object and an object of **Objective-C valid** values.
 
@@ -119,6 +114,8 @@ let intObject = {
 this.watchOSConnector.sendObject('intObjectKey', intObject)
 ```
 
-# License
+## Future Releases
+
+## License
 
 Apache License Version 2.0, January 2004

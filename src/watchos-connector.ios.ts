@@ -48,17 +48,12 @@ export class WatchOSConnector implements WCSessionDelegate {
   }
 
   // Send the data to the companion WatchOS App
-  sendObject(objectKey: string, object: {}) {
+  sendObjectToWatch(objectKey: string, object: {}) {
     this.checkActivation()
 
     // Send the object to the WatchOS app
     let dictionary = NSDictionary.dictionaryWithObjectForKey(object, objectKey)
     this.watchSession.updateApplicationContextError(dictionary)
-  }
-
-  // Used for sessionDidReceiveApplicationContext()
-  getWCSession() {
-    return this.watchSession
   }
 
   // Needed to Conform to WCSessionDelegate - DON'T DELETE!!

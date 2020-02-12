@@ -2,9 +2,11 @@
 
 This is a NativeScript plugin that uses Apple WatchConnectivity to pass and receive data to a companion WatchOS app.
 
-![](https://img.shields.io/npm/v/nativescript-watchos-connector?style=for-the-badge) ![](https://img.shields.io/github/downloads/reecereynolds/nativescript-watchos-connector/total?style=for-the-badge) ![](https://img.shields.io/github/issues/reecereynolds/nativescript-watchos-connector?style=for-the-badge) ![](https://img.shields.io/twitter/follow/_reecereynolds?color=blue&label=Follow%20me&style=for-the-badge)
+[![](https://img.shields.io/npm/v/nativescript-watchos-connector?style=for-the-badge)](https://www.npmjs.com/package/nativescript-watchos-connector) [![](https://img.shields.io/github/downloads/reecereynolds/nativescript-watchos-connector/total?style=for-the-badge)](https://github.com/ReeceReynolds/nativescript-watchos-connector/) [![](https://img.shields.io/github/issues/reecereynolds/nativescript-watchos-connector?style=for-the-badge)](https://github.com/ReeceReynolds/nativescript-watchos-connector/issues) [![](https://img.shields.io/twitter/follow/_reecereynolds?color=blue&label=Follow%20me&style=for-the-badge)](https://twitter.com/_reecereynolds)
 
 # Prerequisites / Requirements
+
+Before using this plugin, make sure you have followed the NativeScript blog post on [Developing a watchOS Extension For Your NativeScript App](https://www.nativescript.org/blog/developing-a-watchos-extension-for-your-nativescript-app) and [iOS WatchOS Applications](https://docs.nativescript.org/angular/tooling/ios-watch-apps).
 
 # Installation
 
@@ -31,8 +33,21 @@ tns plugin add nativescript-watchos-connector
    ```javascript
    constructor(
    	public watchOSConnector: WatchOSConnector
-   ) {}
+   )  {}
    ```
+
+## Plugin Overview
+
+This is a list of all currently available functions and a brief description of their usage within this plugin.
+|Function | Description |
+|--|--|
+|`createWCSession()` |Creates a WCSession|
+|`watchOSChecker()`|Checks if the user is on iOS, has an Apple Watch paired and the WatchOS app is installed|
+|`checkActivation()`|Checks if the WCSession is active (if not, session will be activated)|
+|`convertInt(value)`|Return value as Obj-C int|
+|`convertDouble(value)`|Return value as Obj-C double|
+|`convertFloat(value)`|Return value as Obj-C float|
+|`sendObjectToWatch('objectKey', object)`|Send the data to the companion WatchOS App using ApplicationContext|
 
 ## createWCSession()
 
@@ -103,18 +118,22 @@ Sends the data to the companion WatchOS app using `updateApplicationContext`. Yo
 **TypeScript**
 
 ```javascript
-let fourInt = this.watchOSConnector.convertInt(4)
-let nineInt = this.watchOSConnector.convertInt(9)
+let intValue = this.watchOSConnector.convertInt(4)
+let doubleValue = this.watchOSConnector.convertDouble(45.1)
 
-let intObject = {
-  convertedFourInt: fourInt,
-  convertedNineInt: nineInt
+let numberObject = {
+  convertedInt: intValue,
+  convertedDouble: doubleValue
 }
 
-this.watchOSConnector.sendObject('intObjectKey', intObject)
+this.watchOSConnector.sendObject('numberObjectKey', numberObject)
 ```
 
 ## Future Releases
+
+- [ ] Assign received object from watch to an Observable
+- [ ] JavaScript usage
+- [ ] Add images to README
 
 ## License
 

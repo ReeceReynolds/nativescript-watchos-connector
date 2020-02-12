@@ -24,17 +24,17 @@ tns plugin add nativescript-watchos-connector
 
    **TypeScript**
 
-```javascript
-import { WatchOSConnector } from 'nativescript-watchos-connector'
+    ```javascript
+    import { WatchOSConnector } from 'nativescript-watchos-connector'
 
-@NgModule({
-  bootstrap: [AppComponent],
-  imports: [],
-  providers: [ WatchOSConnector ],
-  declarations: [ AppComponent ],
-  schemas: [ NO_ERRORS_SCHEMA ]
-})
-```
+    @NgModule({
+      bootstrap: [AppComponent],
+      imports: [],
+      providers: [ WatchOSConnector ],
+      declarations: [ AppComponent ],
+      schemas: [ NO_ERRORS_SCHEMA ]
+    })
+     ```
 
 2. Import the nativescript-watchos-connector plugin:
 

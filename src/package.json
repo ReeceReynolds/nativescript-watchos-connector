@@ -29,7 +29,9 @@
   "keywords": [
     "NativeScript",
     "JavaScript",
-    "Android",
+    "TypeScript",
+    "WatchOS",
+    "Apple Watch",
     "iOS"
   ],
   "author": {

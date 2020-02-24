@@ -2,7 +2,7 @@
 
 This is a NativeScript plugin that uses Apple WatchConnectivity to pass and receive data to a companion WatchOS app.
 
-[![](https://img.shields.io/npm/v/nativescript-watchos-connector?style=for-the-badge)](https://www.npmjs.com/package/nativescript-watchos-connector) [![](https://img.shields.io/github/downloads/reecereynolds/nativescript-watchos-connector/total?style=for-the-badge)](https://github.com/ReeceReynolds/nativescript-watchos-connector/) [![](https://img.shields.io/github/issues/reecereynolds/nativescript-watchos-connector?style=for-the-badge)](https://github.com/ReeceReynolds/nativescript-watchos-connector/issues) [![](https://img.shields.io/twitter/follow/_reecereynolds?color=blue&label=Follow%20me&style=for-the-badge)](https://twitter.com/_reecereynolds)
+[![](https://img.shields.io/npm/v/nativescript-watchos-connector?style=for-the-badge)](https://www.npmjs.com/package/nativescript-watchos-connector) [![](https://img.shields.io/github/downloads/reecereynolds/nativescript-watchos-connector/total?style=for-the-badge)](https://github.com/ReeceReynolds/nativescript-watchos-connector/) [![](https://img.shields.io/github/issues/reecereynolds/nativescript-watchos-connector?style=for-the-badge)](https://github.com/ReeceReynolds/nativescript-watchos-connector/issues)
 
 # Prerequisites / Requirements
 
@@ -24,17 +24,17 @@ tns plugin add nativescript-watchos-connector
 
    **TypeScript**
 
-    ```javascript
-    import { WatchOSConnector } from 'nativescript-watchos-connector'
+   ```javascript
+   import { WatchOSConnector } from 'nativescript-watchos-connector'
 
-    @NgModule({
-      bootstrap: [AppComponent],
-      imports: [],
-      providers: [ WatchOSConnector ],
-      declarations: [ AppComponent ],
-      schemas: [ NO_ERRORS_SCHEMA ]
-    })
-     ```
+   @NgModule({
+     bootstrap: [AppComponent],
+     imports: [],
+     providers: [ WatchOSConnector ],
+     declarations: [ AppComponent ],
+     schemas: [ NO_ERRORS_SCHEMA ]
+   })
+   ```
 
 2. Import the nativescript-watchos-connector plugin:
 

@@ -17,6 +17,7 @@ export class WatchOSConnector implements WCSessionDelegate {
   watchOSChecker() {
     if (
       isIOS &&
+      this.watchSession &&
       this.watchSession.paired &&
       this.watchSession.watchAppInstalled
     ) {

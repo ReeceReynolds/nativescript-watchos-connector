@@ -130,7 +130,7 @@ this.watchOSConnector.sendObject('numberObjectKey', numberObject)
 
 - [ ] Add images to README
 
-##  v1.0.2 Release
+##  v1.0.11 Release
 
  1. Updated watchOSChecker method to cover if a watchSession is created. (DanHef)
 

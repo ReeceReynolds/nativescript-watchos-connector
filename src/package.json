@@ -1,6 +1,6 @@
 {
   "name": "nativescript-watchos-connector",
-  "version": "1.0.1",
+  "version": "1.0.11",
   "description": "This is a NativeScript plugin that uses Apple WatchConnectivity to pass and receive data to a companion WatchOS app.",
   "main": "watchos-connector",
   "typings": "index.d.ts",

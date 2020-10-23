@@ -1,57 +1,57 @@
 {
-  "name": "nativescript-watchos-connector",
-  "version": "1.1.0",
-  "description": "This is a NativeScript plugin that uses Apple WatchConnectivity to pass and receive data to a companion WatchOS app.",
-  "main": "watchos-connector",
-  "typings": "index.d.ts",
-  "nativescript": {
-    "platforms": {
-      "ios": "9.0.0"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ReeceReynolds/nativescript-watchos-connector.git"
-  },
-  "scripts": {
-    "tsc": "npm i && tsc",
-    "build": "npm run tsc && npm run build.native",
-    "build.native": "node scripts/build-native.js",
-    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
-    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
-    "prepack": "npm run build.native",
-    "demo-angular.ios": "npm i && cd ../demo-angular && tns run ios",
-    "demo-angular.android": "npm i && cd ../demo-angular && tns run android",
-    "demo-angular.reset": "cd ../demo-angular && npx rimraf -- hooks node_modules platforms package-lock.json",
-    "plugin.prepare": "npm run build undefined && cd ../demo-angular && tns plugin remove nativescript-watchos-connector && tns plugin add ../src",
-    "clean": "npm run demo-angular.reset && npx rimraf -- node_modules package-lock.json && npm i"
-  },
-  "keywords": [
-    "NativeScript",
-    "JavaScript",
-    "TypeScript",
-    "WatchOS",
-    "Apple Watch",
-    "iOS"
-  ],
-  "author": {
-    "name": "Reece Reynolds",
-    "email": "reece@reynolds.codes"
-  },
-  "bugs": {
-    "url": "https://github.com/ReeceReynolds/nativescript-watchos-connector/issues"
-  },
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/ReeceReynolds/nativescript-watchos-connector",
-  "devDependencies": {
-    "tns-core-modules": "^6.0.0",
-    "tns-platform-declarations": "^6.0.0",
-    "typescript": "~3.4.5",
-    "prompt": "^1.0.0",
-    "rimraf": "^2.6.3",
-    "tslint": "^5.12.1",
-    "semver": "^5.6.0"
-  },
-  "dependencies": {},
-  "bootstrapper": "nativescript-plugin-seed"
+	"name": "nativescript-watchos-connector",
+	"version": "2.0.0",
+	"description": "This is a NativeScript plugin that uses Apple WatchConnectivity to pass and receive data to a companion WatchOS app.",
+	"main": "watchos-connector",
+	"typings": "index.d.ts",
+	"nativescript": {
+		"platforms": {
+			"ios": "9.0.0"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ReeceReynolds/nativescript-watchos-connector.git"
+	},
+	"scripts": {
+		"tsc": "npm i && tsc",
+		"build": "npm run tsc && npm run build.native",
+		"build.native": "node scripts/build-native.js",
+		"tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
+		"ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+		"prepack": "npm run build.native",
+		"demo-angular.ios": "npm i && cd ../demo-angular && tns run ios",
+		"demo-angular.android": "npm i && cd ../demo-angular && tns run android",
+		"demo-angular.reset": "cd ../demo-angular && npx rimraf -- hooks node_modules platforms package-lock.json",
+		"plugin.prepare": "npm run build undefined && cd ../demo-angular && tns plugin remove nativescript-watchos-connector && tns plugin add ../src",
+		"clean": "npm run demo-angular.reset && npx rimraf -- node_modules package-lock.json && npm i"
+	},
+	"keywords": [
+		"NativeScript",
+		"JavaScript",
+		"TypeScript",
+		"WatchOS",
+		"Apple Watch",
+		"iOS"
+	],
+	"author": {
+		"name": "Reece Reynolds",
+		"email": "reece@reynolds.codes"
+	},
+	"bugs": {
+		"url": "https://github.com/ReeceReynolds/nativescript-watchos-connector/issues"
+	},
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/ReeceReynolds/nativescript-watchos-connector",
+	"devDependencies": {
+		"@nativescript/core": "~7.0.11",
+		"@nativescript/types": "~7.0.4",
+		"typescript": "~3.4.5",
+		"prompt": "^1.0.0",
+		"rimraf": "^2.6.3",
+		"tslint": "^5.12.1",
+		"semver": "^5.6.0"
+	},
+	"dependencies": {},
+	"bootstrapper": "nativescript-plugin-seed"
 }

@@ -1,26 +1,33 @@
 {
 	"compilerOptions": {
-		"target": "es2017",
+		"rootDir": ".",
+		"target": "ES2017",
 		"module": "esnext",
 		"moduleResolution": "node",
-		"declaration": false,
+		"sourceMap": true,
+		"declaration": true,
 		"removeComments": true,
-		"noLib": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"noEmitOnError": false,
+		"noEmitHelpers": true,
+		"diagnostics": true,
 		"skipLibCheck": true,
-		"lib": ["es6", "dom"],
-		"sourceMap": true,
-		"pretty": false,
+		"skipDefaultLibCheck": true,
+		"pretty": true,
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
-		"noEmitHelpers": true,
-		"noEmitOnError": false,
 		"noImplicitAny": false,
 		"noImplicitReturns": true,
 		"noImplicitUseStrict": false,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+		"lib": ["es2017", "dom"],
+		"plugins": [
+			{
+				"transform": "@nativescript/webpack/transformers/ns-transform-native-classes",
+				"type": "raw"
+			}
+		]
 	},
-	"exclude": ["node_modules"],
-	"compileOnSave": false
+	"exclude": ["demo", "scripts", "node_modules"]
 }

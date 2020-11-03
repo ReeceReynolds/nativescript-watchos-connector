@@ -7,10 +7,14 @@ This is a NativeScript plugin that uses Apple WatchConnectivity to pass and rece
 #  Prerequisites / Requirements
 Before using this plugin, make sure you have followed the NativeScript blog post on [Developing a watchOS Extension For Your NativeScript App](https://www.nativescript.org/blog/developing-a-watchos-extension-for-your-nativescript-app) and [iOS WatchOS Applications](https://docs.nativescript.org/angular/tooling/ios-watch-apps).  
 
-#  Installation
-Run the following command from the root of your project:
+#  Installation NativeScript 7
 ```javascript
-tns plugin add nativescript-watchos-connector
+npm i nativescript-watchos-connector
+```
+
+#  Installation prior to NativeScript 7:
+```javascript
+npm i nativescript-watchos-connector@1.0.11
 ```
 
 #  Usage
@@ -42,7 +46,7 @@ import  {  WatchOSConnector  }  from  'nativescript-watchos-connector'
 **TypeScript**
 ```javascript
 constructor(
-	public watchOSConnector: WatchOSConnector
+	private _watchOSConnector: WatchOSConnector
 ) {}
 ```
 
@@ -125,19 +129,15 @@ let numberObject =  {
 this.watchOSConnector.sendObject('numberObjectKey', numberObject)
 ```
 
+##  v2.0.0 Release
+ 1. Updated to be compatible with NativeScript 7
+
 ##  Future Releases
-- [ ] JavaScript usage
-
 - [ ] Add images to README
-
-##  v1.0.11 Release
-
- 1. Updated watchOSChecker method to cover if a watchSession is created. (DanHef)
+- [ ] Create a demo app
 
 ##  Contributors
  - DanHef - [https://github.com/DanHef](https://github.com/DanHef)
-
-  
 
 ##  License
 Apache License Version 2.0, January 2004
